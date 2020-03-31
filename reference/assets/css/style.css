@@ -1,0 +1,169 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+/* header {
+	background-image: url(../images/background.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+} */
+body {
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+}
+
+nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 110px;
+   padding: 10px 100px;
+   box-sizing: border-box;
+   transition: 0.5s;
+   color: black;
+   background-color: white;
+}
+
+.logo img {
+   float: left;
+   width: 100px;
+   height: 100px;
+}
+
+.logo h1 {
+   float: left;
+   position: relative;
+   top: 35px;
+   left: 10px;
+}
+
+nav ul {
+   float: right;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+nav ul li {
+   list-style: none;
+}
+
+nav ul li a {
+   line-height: 80px;
+   color: #262626;
+   padding: 5px 20px;
+   text-decoration: none;
+   text-transform: uppercase;
+   transition: 0.5s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+   color: #fff;
+   background: #f00;
+}
+
+section.sec1 {
+   width: 100%;
+   height: 100%;
+   background: url(../images/azadi.jpg);
+   background-size: cover;
+}
+
+section.sec2 {
+   width: 100%;
+   height: 100%;
+   background: url(../images/sio.jpg);
+   background-size: cover;
+}
+
+section.sec3 {
+   width: 100%;
+   height: 100%;
+   background: url(../images/gate.jpg);
+   background-size: cover;
+}
+
+section.sec4 {
+   width: 100%;
+   height: 100%;
+   background: url(../images/cyrus.jpg);
+   background-size: cover;
+}
+
+section.content {
+   padding: 100px;
+}
+
+section.content h1 {
+   margin: 0;
+   padding: 0;
+   font-size: 2em;
+}
+
+section.content p {
+   margin: 20px 0 0;
+   padding: 0;
+   font-size: 1.1em;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+ul {
+   float: right;
+   list-style-type: none;
+}
+ul li {
+   display: inline-block;
+}
+ul li a {
+   text-decoration: none;
+   color: antiquewhite;
+   padding: 5px 20px;
+   border: 1px solid;
+   transition: 0.6s ease;
+}
+
+#page-container {
+   position: relative;
+   min-height: 100vh;
+}
+
+#content-wrap {
+   padding-bottom: 2.5rem; /* Footer height */
+}
+
+#footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 2.5rem; /* Footer height */
+   color: black;
+}
+h1 {
+   color: green;
+   justify-content: center;
+   position: fixed;
+}
+p {
+   font-size: larger;
+   color: black;
+   justify-content: center;
+}
+ul li a:hover {
+   background-color: green;
+   color: white;
+}
+
+/* footer{  */
+/* font-style: italic;  */
+/* float: left;  */
+/* position: bottom;  */
+/* }  */

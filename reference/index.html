@@ -1,0 +1,293 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+   <title>Travel Iran</title>
+</head>
+<style>
+   .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+   }
+
+   .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+   }
+
+   .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+   }
+
+   .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+   }
+</style>
+
+<body>
+   <nav>
+      <div class="logo">
+         <img src="./assets/images/iran.png" style="width:100px; height:90px;">
+         <h1>Travel Iran</h1>
+      </div>
+
+
+      <ul>
+         <li><a href="#" class="active">Home</a></li>
+         <li><a href="#">About Iran</a></li>
+         <li><a href="#">Gallery</a></li>
+         <li><a href="#">Contact Us</a></li>
+      </ul>
+   </nav>
+   <section class="sec1"></section>
+   <section class="content">
+      <h2>Create Your Profile!</h2>
+      <br>
+      <form action="results.html" method="GET">
+         <div class="tooltip">
+            <span class="tooltiptext">Enter First Name</span>
+            <label for="name">First Name: </label>
+            <input type="text" name="name" id="name" placeholder="firstname" required>
+         </div>
+         <!-- <div>
+                <label for="name">First Name</label>
+                <input type="text" name="name" id="name" placeholder="firstname" required>
+            </div> -->
+         <br>
+         <div class="tooltip">
+            <span class="tooltiptext">Enter Last Name</span>
+            <label for="lastname">Last Name: </label>
+            <input type="text" name="lastname" id="lastname" placeholder="lastname" required>
+         </div>
+         <!-- <div>
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" placeholder="lastname" required>
+            </div> -->
+         <br>
+         <div class="tooltip">
+            <span class="tooltiptext">Enter Birthdate</span>
+            <label for="date">Birthday: </label>
+            <input type="date" name="date" id="date">
+         </div>
+         <br>
+         <div class="tooltip">
+            <span class="tooltiptext">Enter Email Address</span>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="name@mailbox.com" required>
+         </div>
+         <br>
+         <div class="tooltip">
+            <span class="tooltiptext">Enter a Password:</span>
+            <label>
+               Password:
+               <input type="password" name="password" id="password" placeholder="password" required>
+            </label>
+         </div>
+         <div>
+            Gender:
+            <div>
+               <label for="male">Male</label>
+               <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <div>
+               <label for="female">Female</label>
+               <input type="radio" name="gender" id="female" value="female">
+            </div>
+            <div class="tooltip">
+               <span class="tooltiptext">Enter Phone Number</span>
+               <label for="phone">Phone: </label>
+               <input type="tel" name="phone" id="phone">
+            </div>
+            <br>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+      </form>
+      <br>
+      <br>
+      <h2>Plan your next trip to Iran!</h2>
+      <br>
+      <form action="results.html" method="GET">
+         <div>
+            <label for="name">City you plan on traveling to:</label>
+            <br>
+            <select name="cars">
+               <option value="City">-Please Select a City-</option>
+               <option value="volvo">Tehran</option>
+               <option value="saab">Shiraz</option>
+               <option value="fiat">Isfahan</option>
+               <option value="audi">Yazd</option>
+            </select>
+         </div>
+         <br>
+         <div>
+            <label for="date">Travel Date:</label>
+            <br>
+            <input type="date" name="date" id="date"> to <input type="date" name="date" id="date">
+         </div>
+         <button type="submit">Submit</button>
+   </section>
+   <section class="sec2"></section>
+   <section class="content">
+      <h2>Culture</h2>
+      <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua. Est ultricies integer quis auctor elit sed. Orci nulla pellentesque dignissim enim sit amet
+         venenatis urna. Odio euismod lacinia at quis risus sed vulputate odio. Netus et malesuada fames ac turpis
+         egestas maecenas pharetra. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Pharetra pharetra massa
+         massa ultricies mi quis hendrerit. Bibendum arcu vitae elementum curabitur vitae nunc sed. Arcu bibendum at
+         varius vel. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Gravida dictum fusce ut placerat.
+         Quam nulla porttitor massa id neque aliquam vestibulum morbi. Curabitur vitae nunc sed velit dignissim. Sit
+         amet luctus venenatis lectus magna. Hendrerit gravida rutrum quisque non tellus orci ac auctor. Nulla facilisi
+         etiam dignissim diam quis enim lobortis scelerisque.
+         <br><br>
+         Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Id neque aliquam vestibulum morbi
+         blandit. Odio morbi quis commodo odio aenean sed adipiscing. Cras ornare arcu dui vivamus arcu felis. Enim ut
+         tellus elementum sagittis vitae et leo. Nisl rhoncus mattis rhoncus urna neque viverra justo nec. Sagittis id
+         consectetur purus ut faucibus pulvinar elementum integer enim. Rhoncus dolor purus non enim praesent elementum
+         facilisis. In nibh mauris cursus mattis molestie a. Tellus integer feugiat scelerisque varius morbi enim. In
+         massa tempor nec feugiat. Condimentum mattis pellentesque id nibh tortor. Velit ut tortor pretium viverra
+         suspendisse potenti nullam ac tortor. Ac auctor augue mauris augue neque gravida in fermentum et. Nunc sed
+         velit dignissim sodales ut. Malesuada pellentesque elit eget gravida cum sociis. Elementum sagittis vitae et
+         leo duis ut diam quam nulla.
+         <br><br>
+         Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Augue ut lectus arcu bibendum at.
+         Pellentesque eu tincidunt tortor aliquam nulla. Morbi tincidunt augue interdum velit euismod in pellentesque.
+         Pellentesque nec nam aliquam sem. Fringilla phasellus faucibus scelerisque eleifend donec. Ultrices in iaculis
+         nunc sed augue lacus viverra. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Laoreet
+         suspendisse interdum consectetur libero id faucibus. Venenatis tellus in metus vulputate eu scelerisque. Tempor
+         orci dapibus ultrices in iaculis nunc sed. Vivamus arcu felis bibendum ut. Elit ut aliquam purus sit amet
+         luctus venenatis lectus magna. Est ultricies integer quis auctor elit sed vulputate. Aliquam id diam maecenas
+         ultricies mi eget mauris pharetra et. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
+         Lacus vel facilisis volutpat est velit. Id consectetur purus ut faucibus pulvinar. Sapien et ligula ullamcorper
+         malesuada. Amet facilisis magna etiam tempor orci eu lobortis elementum.
+         <br><br>
+   </section>
+   <section class="sec3"></section>
+   <section class="content">
+      <h2>Flight Accommodations</h2>
+      <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua. Est ultricies integer quis auctor elit sed. Orci nulla pellentesque dignissim enim sit amet
+         venenatis urna. Odio euismod lacinia at quis risus sed vulputate odio. Netus et malesuada fames ac turpis
+         egestas maecenas pharetra. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Pharetra pharetra massa
+         massa ultricies mi quis hendrerit. Bibendum arcu vitae elementum curabitur vitae nunc sed. Arcu bibendum at
+         varius vel. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Gravida dictum fusce ut placerat.
+         Quam nulla porttitor massa id neque aliquam vestibulum morbi. Curabitur vitae nunc sed velit dignissim. Sit
+         amet luctus venenatis lectus magna. Hendrerit gravida rutrum quisque non tellus orci ac auctor. Nulla facilisi
+         etiam dignissim diam quis enim lobortis scelerisque.
+         <br><br>
+         Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Id neque aliquam vestibulum morbi
+         blandit. Odio morbi quis commodo odio aenean sed adipiscing. Cras ornare arcu dui vivamus arcu felis. Enim ut
+         tellus elementum sagittis vitae et leo. Nisl rhoncus mattis rhoncus urna neque viverra justo nec. Sagittis id
+         consectetur purus ut faucibus pulvinar elementum integer enim. Rhoncus dolor purus non enim praesent elementum
+         facilisis. In nibh mauris cursus mattis molestie a. Tellus integer feugiat scelerisque varius morbi enim. In
+         massa tempor nec feugiat. Condimentum mattis pellentesque id nibh tortor. Velit ut tortor pretium viverra
+         suspendisse potenti nullam ac tortor. Ac auctor augue mauris augue neque gravida in fermentum et. Nunc sed
+         velit dignissim sodales ut. Malesuada pellentesque elit eget gravida cum sociis. Elementum sagittis vitae et
+         leo duis ut diam quam nulla.
+         <br><br>
+         Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Augue ut lectus arcu bibendum at.
+         Pellentesque eu tincidunt tortor aliquam nulla. Morbi tincidunt augue interdum velit euismod in pellentesque.
+         Pellentesque nec nam aliquam sem. Fringilla phasellus faucibus scelerisque eleifend donec. Ultrices in iaculis
+         nunc sed augue lacus viverra. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Laoreet
+         suspendisse interdum consectetur libero id faucibus. Venenatis tellus in metus vulputate eu scelerisque. Tempor
+         orci dapibus ultrices in iaculis nunc sed. Vivamus arcu felis bibendum ut. Elit ut aliquam purus sit amet
+         luctus venenatis lectus magna. Est ultricies integer quis auctor elit sed vulputate. Aliquam id diam maecenas
+         ultricies mi eget mauris pharetra et. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
+         Lacus vel facilisis volutpat est velit. Id consectetur purus ut faucibus pulvinar. Sapien et ligula ullamcorper
+         malesuada. Amet facilisis magna etiam tempor orci eu lobortis elementum.
+         <br><br>
+         Proin gravida hendrerit lectus a. Nisl tincidunt eget nullam non nisi. Lacus luctus accumsan tortor posuere ac
+         ut. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Adipiscing commodo elit at imperdiet dui
+         accumsan sit. Id aliquet risus feugiat in ante metus dictum at. Cursus risus at ultrices mi tempus. Sit amet
+         risus nullam eget felis eget nunc. Sapien eget mi proin sed libero enim sed. Proin sed libero enim sed faucibus
+         turpis in eu mi. Imperdiet proin fermentum leo vel orci porta. Accumsan in nisl nisi scelerisque eu ultrices
+         vitae auctor. Magna ac placerat vestibulum lectus. Enim lobortis scelerisque fermentum dui.
+         <br><br>
+         At in tellus integer feugiat scelerisque varius morbi. Dictum varius duis at consectetur lorem donec massa
+         sapien. Ac feugiat sed lectus vestibulum. Nulla porttitor massa id neque. Id leo in vitae turpis massa sed
+         elementum tempus egestas. Sem viverra aliquet eget sit. Nunc congue nisi vitae suscipit tellus mauris. Ultrices
+         vitae auctor eu augue ut. Velit ut tortor pretium viverra suspendisse potenti nullam. Aliquam id diam maecenas
+         ultricies mi eget. Sodales ut eu sem integer.
+         <br><br>
+      </p>
+   </section>
+   <section class="sec4"></section>
+   <section class="content">
+      <h2>Our Agency</h2>
+      <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua. Est ultricies integer quis auctor elit sed. Orci nulla pellentesque dignissim enim sit amet
+         venenatis urna. Odio euismod lacinia at quis risus sed vulputate odio. Netus et malesuada fames ac turpis
+         egestas maecenas pharetra. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Pharetra pharetra massa
+         massa ultricies mi quis hendrerit. Bibendum arcu vitae elementum curabitur vitae nunc sed. Arcu bibendum at
+         varius vel. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Gravida dictum fusce ut placerat.
+         Quam nulla porttitor massa id neque aliquam vestibulum morbi. Curabitur vitae nunc sed velit dignissim. Sit
+         amet luctus venenatis lectus magna. Hendrerit gravida rutrum quisque non tellus orci ac auctor. Nulla facilisi
+         etiam dignissim diam quis enim lobortis scelerisque.
+         <br><br>
+         Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Id neque aliquam vestibulum morbi
+         blandit. Odio morbi quis commodo odio aenean sed adipiscing. Cras ornare arcu dui vivamus arcu felis. Enim ut
+         tellus elementum sagittis vitae et leo. Nisl rhoncus mattis rhoncus urna neque viverra justo nec. Sagittis id
+         consectetur purus ut faucibus pulvinar elementum integer enim. Rhoncus dolor purus non enim praesent elementum
+         facilisis. In nibh mauris cursus mattis molestie a. Tellus integer feugiat scelerisque varius morbi enim. In
+         massa tempor nec feugiat. Condimentum mattis pellentesque id nibh tortor. Velit ut tortor pretium viverra
+         suspendisse potenti nullam ac tortor. Ac auctor augue mauris augue neque gravida in fermentum et. Nunc sed
+         velit dignissim sodales ut. Malesuada pellentesque elit eget gravida cum sociis. Elementum sagittis vitae et
+         leo duis ut diam quam nulla.
+         <br><br>
+         Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Augue ut lectus arcu bibendum at.
+         Pellentesque eu tincidunt tortor aliquam nulla. Morbi tincidunt augue interdum velit euismod in pellentesque.
+         Pellentesque nec nam aliquam sem. Fringilla phasellus faucibus scelerisque eleifend donec. Ultrices in iaculis
+         nunc sed augue lacus viverra. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Laoreet
+         suspendisse interdum consectetur libero id faucibus. Venenatis tellus in metus vulputate eu scelerisque. Tempor
+         orci dapibus ultrices in iaculis nunc sed. Vivamus arcu felis bibendum ut. Elit ut aliquam purus sit amet
+         luctus venenatis lectus magna. Est ultricies integer quis auctor elit sed vulputate. Aliquam id diam maecenas
+         ultricies mi eget mauris pharetra et. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
+         Lacus vel facilisis volutpat est velit. Id consectetur purus ut faucibus pulvinar. Sapien et ligula ullamcorper
+         malesuada. Amet facilisis magna etiam tempor orci eu lobortis elementum.
+         <br><br>
+         Proin gravida hendrerit lectus a. Nisl tincidunt eget nullam non nisi. Lacus luctus accumsan tortor posuere ac
+         ut. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Adipiscing commodo elit at imperdiet dui
+         accumsan sit. Id aliquet risus feugiat in ante metus dictum at. Cursus risus at ultrices mi tempus. Sit amet
+         risus nullam eget felis eget nunc. Sapien eget mi proin sed libero enim sed. Proin sed libero enim sed faucibus
+         turpis in eu mi. Imperdiet proin fermentum leo vel orci porta. Accumsan in nisl nisi scelerisque eu ultrices
+         vitae auctor. Magna ac placerat vestibulum lectus. Enim lobortis scelerisque fermentum dui.
+         <br><br>
+         At in tellus integer feugiat scelerisque varius morbi. Dictum varius duis at consectetur lorem donec massa
+         sapien. Ac feugiat sed lectus vestibulum. Nulla porttitor massa id neque. Id leo in vitae turpis massa sed
+         elementum tempus egestas. Sem viverra aliquet eget sit. Nunc congue nisi vitae suscipit tellus mauris. Ultrices
+         vitae auctor eu augue ut. Velit ut tortor pretium viverra suspendisse potenti nullam. Aliquam id diam maecenas
+         ultricies mi eget. Sodales ut eu sem integer.
+         <br><br>
+      </p>
+   </section>
+
+</body>
+<footer>&copy; Kavon Sabet</footer>
+
+</html>
