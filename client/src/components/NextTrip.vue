@@ -19,7 +19,10 @@
 						</button>
 					</div>
 					<div class="form-group">
-						<label for="cities">City you plan on traveling to</label>
+						<label for="cities" class="mb-0">City you plan on traveling to</label>
+						<div class="my-2">
+							<img :src="cityImage.image" alt="" v-for="(cityImage,cI) in computedCityImages" :key="cI" class="d-inline-block mr-2 city-image">
+						</div>
 						<select v-model="city" class="form-control" id="cities">
 							<option
 								v-for="(city, i) in cities"
@@ -56,13 +59,29 @@ export default {
 		city: null,
 		cities: [null, "Tehran", "Shiraz", "Isfahan", "Yazd"],
 		dateFrom: "", dateTo: "",
-		error: null, success: null
+		error: null, success: null,
+		cityImages:[
+			{city: "Isfahan", image: require("@/assets/images/isfahan.jpg")},
+			{city: "Isfahan", image: require("@/assets/images/sio.jpg")},
+			{city: "Shiraz", image: require("@/assets/images/cyrus.jpg")},
+			{city: "Shiraz", image: require("@/assets/images/gate.jpg")},
+			{city: "Yazd", image: require("@/assets/images/fire_temple.jpg")},
+			{city: "Yazd", image: require("@/assets/images/yazd.jpg")},
+			{city: "Tehran", image: require("@/assets/images/azadi.jpg")},
+			{city: "Tehran", image: require("@/assets/images/milad.jpg")},
+		]
 	}),
 	mixins: [GLOBAL_MIXINS],
 	created() {
 		this.dateFrom = new Date().toISOString().substr(0, 10)
 		const DAYS_LATER = day => moment().add(day, 'days').format("X") * 1000
 		this.dateTo = new Date(DAYS_LATER(3)).toISOString().substr(0, 10)
+	},
+	computed:{
+		computedCityImages(){
+			if(this.city == null || this.city.trim().length == 0) return []
+			return this.cityImages.filter(cityImage => this.city == cityImage.city)
+		}
 	},
 	methods: {
 		async onClickSubmit() {
@@ -77,5 +96,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.city-image{
+	height: 100px;
+	width: 150px;
+}
 </style>

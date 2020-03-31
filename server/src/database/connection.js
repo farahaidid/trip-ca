@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const connectionString = process.env.MONGO_LOCAL
+const connectionString = "mongodb://localhost:27017/Trip"//process.env.MONGO_LOCAL
 
 exports.connect = async () => {
    try {

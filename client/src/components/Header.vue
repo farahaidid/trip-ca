@@ -42,7 +42,7 @@ export default {
 		fixNavs() {
 			let lastIndex = this.items.length - 1
 			if (this.LOGGED_IN) {
-				this.items.splice(lastIndex, 1, { text: "Logout", to: "/login", active: false })
+				this.items.splice(lastIndex, 1, { text: "Logout", to: "/", active: false })
 			} else {
 				this.items.splice(lastIndex, 1, { text: "Login", to: "/login", active: false })
 			}
