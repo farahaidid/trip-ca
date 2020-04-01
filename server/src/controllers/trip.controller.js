@@ -12,8 +12,8 @@ exports.getTrips = async (req, res, next) => {
 
 exports.createTrip = async (req, res, next) => {
    try {
-      let { city, dateFrom, dateTo, _id } = req.body
-      let trip = new Trips({ city, dateFrom, dateTo, addedBy: _id })
+      let { city, dateFrom, dateTo, price, _id } = req.body
+      let trip = new Trips({ city, dateFrom, dateTo, price, addedBy: _id })
       let hasError = trip.validateSync()
       if (hasError) throw new ErrorHandler(BAD_REQUEST, hasError.message)
       try {

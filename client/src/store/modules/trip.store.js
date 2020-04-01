@@ -19,12 +19,13 @@ const mutations = {
 }
 
 const actions = {
-   SAVE_TRIP: ({ commit, state, rootState }, { city, dateFrom, dateTo }) => new Promise(async resolve => {
+   SAVE_TRIP: ({ commit, state, rootState }, { city, dateFrom, dateTo, price }) => new Promise(async resolve => {
       try {
          let { _id, token } = rootState.AUTH.loggedUser
          let data = {
             city, dateFrom: new Date(dateFrom).toISOString(),
-            dateTo: new Date(dateTo).toISOString()
+            dateTo: new Date(dateTo).toISOString(),
+            price
          }
          let trip = (await API.post(`user/${_id}/trips?token=${token}`, data)).data
          let trips = [{ ...trip }, ...state.trips]

@@ -15,6 +15,10 @@ const schema = new mongoose.Schema({
       type: Date,
       required: true
    },
+   price: {
+      type: Number,
+      required: true
+   },
    addedBy: {
       type: ObjectId,
       required: true

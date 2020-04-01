@@ -9,6 +9,7 @@
 					<th scope="col">City</th>
 					<th scope="col">Date from</th>
 					<th scope="col">Date to</th>
+					<th scope="col">Price</th>
 					<th scope="col">Action</th>
 				</tr>
 			</thead>
@@ -18,6 +19,7 @@
 					<td>{{trip.city}}</td>
 					<td>{{formated(trip.dateFrom)}}</td>
 					<td>{{formated(trip.dateTo)}}</td>
+					<td>${{trip.price}}</td>
 					<td>
 						<button @click="DELETE_TRIP(trip._id)" class="btn btn-sm btn-danger ml-1">&times;</button>
 					</td>

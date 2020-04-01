@@ -32,6 +32,12 @@
 						</select>
 					</div>
 					<div>
+						<label for="">Cost (Including Hotel and Tour Guide <strong>${{costPerWeek}}/week</strong> )</label>
+						<p class="m-0 p-0 mb-2">
+							<strong class="ml-1">${{cost}}</strong>
+						</p>
+					</div>
+					<div>
 						<label>Travel Date</label>
 						<div class="d-flex">
 							<div class="form-group w-100">
@@ -56,6 +62,7 @@ import GLOBAL_MIXINS from "../mixins/global.mixins"
 export default {
 	name: "AddTrip",
 	data: () => ({
+		costPerWeek: 2500,
 		city: null,
 		cities: [null, "Tehran", "Shiraz", "Isfahan", "Yazd"],
 		dateFrom: "", dateTo: "",
@@ -81,12 +88,17 @@ export default {
 		computedCityImages(){
 			if(this.city == null || this.city.trim().length == 0) return []
 			return this.cityImages.filter(cityImage => this.city == cityImage.city)
+		},
+		cost(){
+			let daysDiff = moment(this.dateTo).diff(moment(this.dateFrom),"days") + 1
+			let perDayCost = this.costPerWeek / 7
+			return (daysDiff * perDayCost).toFixed(2)
 		}
 	},
 	methods: {
 		async onClickSubmit() {
 			if (!this.city) { return this.error = "Please select a city first!" }
-			let { error, message } = await this.SAVE_TRIP({ city: this.city, dateFrom: this.dateFrom, dateTo: this.dateTo })
+			let { error, message } = await this.SAVE_TRIP({ city: this.city, dateFrom: this.dateFrom, dateTo: this.dateTo, price: this.cost })
 			console.log(error, message)
 			if (error) { return this.error = error }
 			this.success = message
