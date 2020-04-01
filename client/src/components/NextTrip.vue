@@ -34,7 +34,7 @@
 					<div>
 						<label for="">Cost (Including Hotel and Tour Guide <strong>${{costPerWeek}}/week</strong> )</label>
 						<p class="m-0 p-0 mb-2">
-							<strong class="ml-1">${{cost}}</strong>
+							<strong class="ml-1">${{cost}}</strong> <span>(For {{daysDiff}} Days)</span>
 						</p>
 					</div>
 					<div>
@@ -89,10 +89,12 @@ export default {
 			if(this.city == null || this.city.trim().length == 0) return []
 			return this.cityImages.filter(cityImage => this.city == cityImage.city)
 		},
+		daysDiff(){
+			return moment(this.dateTo).diff(moment(this.dateFrom),"days") + 1
+		},
 		cost(){
-			let daysDiff = moment(this.dateTo).diff(moment(this.dateFrom),"days") + 1
 			let perDayCost = this.costPerWeek / 7
-			return (daysDiff * perDayCost).toFixed(2)
+			return (this.daysDiff * perDayCost).toFixed(2)
 		}
 	},
 	methods: {
