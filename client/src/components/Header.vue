@@ -32,19 +32,18 @@ export default {
 		items: [
 			{ text: "Home", to: "/", active: true },
 			{ text: "About Iran", to: "#", active: false },
-			{ text: "Gallery", to: "#", active: false },
-			{ text: "Contact Us", to: "#", active: false },
+			{ text: "FAQ", to: "/faq", active: false },
 		]
 	}),
 	created() { this.fixNavs() },
 	mixins: [GLOBAL_MIXINS],
 	methods: {
 		fixNavs() {
-			let lastIndex = this.items.length - 1
+			//let lastIndex = this.items.length - 1
 			if (this.LOGGED_IN) {
-				this.items.splice(lastIndex, 1, { text: "Logout", to: "/", active: false })
+				this.items.push({ text: "Logout", to: "/", active: false })
 			} else {
-				this.items.splice(lastIndex, 1, { text: "Login", to: "/login", active: false })
+				this.items.push({ text: "Login", to: "/login", active: false })
 			}
 		},
 		onClickRouterLink(item, i) {

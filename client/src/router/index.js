@@ -40,6 +40,11 @@ const routes = [
       path: '/forgot-password',
       name: 'ForgotPassword',
       component: views("ForgotPassword")
+   },
+   {
+      path: '/faq',
+      name: 'FAQ',
+      component: views("FAQ")
    }
 ]
 
